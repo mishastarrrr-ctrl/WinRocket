@@ -93,7 +93,7 @@
                                 <span v-else class="text-red-500">✘</span>
                                 Virtualization (KVM) enabled
                                 <a
-                                    href="https://duckduckgo.com/?t=h_&q=how+to+enable+virtualization+in+%3Cmotherboard+brand%3E+bios&ia=web"
+                                    href="https://www.google.com/search?q=how+to+enable+virtualization+in+%3Cmotherboard+brand%3E+bios"
                                     @click="openAnchorLink"
                                     target="_blank"
                                     class="text-violet-400 hover:underline ml-1"
