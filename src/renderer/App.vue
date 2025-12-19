@@ -21,7 +21,7 @@
             @buttonclick="handleTitleBarEvent"
             class="backdrop-blur-xl bg-neutral-900/50"
         >
-            <x-label>WinBoat</x-label>
+            <x-label>WinRocket</x-label>
         </x-titlebar>
 
         <!-- Updater -->
@@ -31,7 +31,7 @@
                 <h3 class="mt-2">Manual Guest Server Update Required</h3>
                 <div class="max-w-[60vw]">
                     <strong
-                        >WinBoat has encountered an issue while trying to update the Guest Server automatically. Please
+                        >WinRocket has encountered an issue while trying to update the Guest Server automatically. Please
                         follow the steps below to manually update it:</strong
                     >
                     <ol class="mt-2 list-decimal list-inside">
@@ -62,7 +62,7 @@
                             Start the <code>WinBoatGuestServer</code> service by right clicking and pressing "Start"
                         </li>
                         <li>If you were using VNC, log out of Windows and close it</li>
-                        <li>Restart WinBoat</li>
+                        <li>Restart WinRocket</li>
                     </ol>
                     <p>We're sorry for the inconvenience. 😟</p>
                 </div>
@@ -125,13 +125,13 @@
                     </x-navitem>
                 </RouterLink>
                 <div class="flex flex-col justify-end items-center p-4 h-full">
-                    <p class="text-xs text-neutral-500">WinBoat Beta v{{ appVer }} {{ isDev ? "Dev" : "Prod" }}</p>
+                    <p class="text-xs text-neutral-500">WinRocket Beta v{{ appVer }} {{ isDev ? "Dev" : "Prod" }}</p>
                 </div>
             </x-nav>
             <div class="px-5 flex-grow max-h-[calc(100vh-2rem)] overflow-y-auto py-4">
                 <div class="flex flex-row gap-2 items-center my-6">
                     <Icon class="w-6 h-6 opacity-60" icon="icon-park-solid:toolkit"></Icon>
-                    <h1 class="my-0 text-2xl font-semibold opacity-60">WinBoat</h1>
+                    <h1 class="my-0 text-2xl font-semibold opacity-60">WinRocket</h1>
                     <Icon class="w-6 h-6" icon="bitcoin-icons:caret-right-filled"></Icon>
                     <Icon class="w-6 h-6" :icon="useRoute().meta.icon as string"></Icon>
                     <h1 class="my-0 text-2xl font-semibold">

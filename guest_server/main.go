@@ -339,7 +339,7 @@ func main() {
 	r.HandleFunc("/auth/set-hash", setAuthHash).Methods("POST")
 	handler := cors.Default().Handler(r)
 
-	log.Println("Starting WinBoat Guest Server on :7148...")
+	log.Println("Starting WinRocket Guest Server on :7148...")
 	if err := http.ListenAndServe(":7148", handler); err != nil {
 		log.Fatal("Server failed: ", err)
 	}

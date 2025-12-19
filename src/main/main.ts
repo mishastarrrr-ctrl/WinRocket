@@ -60,8 +60,8 @@ function createWindow() {
         dialog.showMessageBoxSync(null, {
             type: "error",
             buttons: ["Close"],
-            title: "WinBoat",
-            message: "An instance of WinBoat is already running.\n\tMultiple Instances are not allowed.",
+            title: "WinRocket",
+            message: "An instance of WinRocket is already running.\n\tMultiple Instances are not allowed.",
         });
         app.exit();
     }

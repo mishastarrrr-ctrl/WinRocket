@@ -9,10 +9,10 @@ body:
       attributes:
           value: |
               Thanks for taking your time reporting an issue.
-              Please make sure to look through the [issue tracker](https://github.com/TibixDev/winboat/issues) before submitting an issue as to avoid duplicates.
+              Please make sure to look through the [issue tracker](https://github.com/mishastarrrr-ctrl/WinRocket/issues) before submitting an issue as to avoid duplicates.
     - type: input
       attributes:
-          label: What version of WinBoat are you running?
+          label: What version of WinRocket are you running?
       validations:
           required: true
     - type: textarea

@@ -8,7 +8,7 @@
         "oneClick": false,
         "perMachine": false,
         "allowToChangeInstallationDirectory": true,
-        "shortcutName": "WinBoat"
+        "shortcutName": "WinRocket"
     },
     "win": {
         "target": "nsis"

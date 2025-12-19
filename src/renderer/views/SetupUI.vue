@@ -42,7 +42,7 @@
                     <div v-if="currentStep.id === StepID.WELCOME" class="step-block">
                         <h1 class="text-3xl font-semibold">{{ currentStep.title }}</h1>
                         <p class="text-lg text-gray-400">
-                            WinBoat is a full-fledged app that helps you natively run Windows applications on your Linux
+                            WinRocket is a full-fledged app that helps you natively run Windows applications on your Linux
                             machine with ease.
                         </p>
                         <p class="text-lg text-gray-400">
@@ -57,7 +57,7 @@
                     <div v-if="currentStep.id === StepID.LICENSE" class="step-block">
                         <h1 class="text-3xl font-semibold">{{ currentStep.title }}</h1>
                         <p class="text-lg text-gray-400">
-                            WinBoat is open-source software licensed under the MIT License. Please review the license
+                             is open-source software licensed under the MIT License. Please review the license
                             agreement below.
                         </p>
                         <pre class="text-sm text-gray-400 bg-neutral-800 p-4 rounded-lg overflow-auto">
@@ -73,7 +73,7 @@
                     <div v-if="currentStep.id === StepID.PREREQUISITES" class="step-block">
                         <h1 class="text-3xl font-semibold">{{ currentStep.title }}</h1>
                         <p class="text-lg text-gray-400">
-                            In order to run WinBoat, your computer must meet the following requirements.
+                            In order to run WinRocket, your computer must meet the following requirements.
                         </p>
                         <ul class="text-lg text-gray-400 list-none space-y-1.5 bg-neutral-800 py-3 rounded-lg">
                             <li class="flex items-center gap-2">
@@ -256,7 +256,7 @@
                     <div v-if="currentStep.id === StepID.INSTALL_LOCATION" class="step-block">
                         <h1 class="text-3xl font-semibold">{{ currentStep.title }}</h1>
                         <p class="text-lg text-gray-400">
-                            Choose where you want to install WinBoat. Files related to the Windows virtual machine will
+                            Choose where you want to install WinRocket. Files related to the Windows virtual machine will
                             be stored in this location.
                         </p>
                         <p class="text-lg text-gray-400">
@@ -382,7 +382,7 @@
                                         >
                                             We offer you the possibility of using a custom Windows ISO for your
                                             convenience, however we can't provide any support if your custom ISO breaks
-                                            or certain features within WinBoat stop working.
+                                            or certain features within WinRocket stop working.
                                         </span>
                                     </span>
                                 </div>
@@ -506,7 +506,7 @@
                     <div v-if="currentStep.id === StepID.HARDWARE_CONFIG" class="step-block">
                         <h1 class="text-3xl font-semibold">{{ currentStep.title }}</h1>
                         <p class="text-lg text-gray-400">
-                            WinBoat utilizes a containerized KVM virtual machine to run Windows applications. Please
+                            WinRocket utilizes a containerized KVM virtual machine to run Windows applications. Please
                             configure the hardware settings for the virtual machine.
                         </p>
 
@@ -611,7 +611,7 @@
                     <div v-if="currentStep.id === StepID.SHOULD_SHARE_HOME_FOLDER" class="step-block">
                         <h1 class="text-3xl font-semibold">{{ currentStep.title }}</h1>
                         <p class="text-lg text-gray-400">
-                            WinBoat allows you to share your Linux home folder with the Windows virtual machine, here
+                            WinRocket allows you to share your Linux home folder with the Windows virtual machine, here
                             you can choose whether to enable this feature or not.
                         </p>
                         <p class="text-lg text-gray-400">
@@ -642,7 +642,7 @@
                     <div v-if="currentStep.id === StepID.REVIEW" class="step-block">
                         <h1 class="text-3xl font-semibold">{{ currentStep.title }}</h1>
                         <p class="text-lg text-gray-400">
-                            Please review the settings you've chosen for your WinBoat installation. If everything looks
+                            Please review the settings you've chosen for your WinRocket installation. If everything looks
                             correct, click "Install" to begin.
                         </p>
 
@@ -704,7 +704,7 @@
                     <div v-if="currentStep.id === StepID.INSTALL" class="step-block">
                         <h1 class="text-3xl font-semibold">Installation</h1>
                         <p class="text-lg text-gray-400 text-justify">
-                            WinBoat is now installing Windows. Please be patient as this may take up to an hour. In the
+                            WinRocket is now installing Windows. Please be patient as this may take up to an hour. In the
                             meantime, you can grab a coffee and check the installation status
                             <span v-if="linkableInstallSteps.includes(installState)">
                                 <a :href="`http://127.0.0.1:${vncPort}`" @click="openAnchorLink">in your browser</a>.
@@ -829,7 +829,7 @@ enum StepID {
 const steps: Step[] = [
     {
         id: StepID.WELCOME,
-        title: "Welcome to WinBoat",
+        title: "Welcome to WinRocket",
         icon: "tdesign:wave-bye-filled",
     },
     {

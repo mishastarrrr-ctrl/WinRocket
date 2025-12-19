@@ -237,7 +237,7 @@
                                             >
                                                 This device appears to be using the MTP protocol, which is known for
                                                 being problematic. Some Desktop Environments automatically mount MTP
-                                                devices, which in turn causes WinBoat to not be able to pass the device
+                                                devices, which in turn causes WinRocket to not be able to pass the device
                                                 through.
                                             </span>
                                         </span>
@@ -573,7 +573,7 @@
                             <h1 class="text-lg my-0 font-semibold">Advanced Settings</h1>
                         </div>
                         <p class="text-neutral-400 text-[0.9rem] !pt-0 !mt-0">
-                            If enabled, you'll have access to advanced settings that may prevent WinBoat from working if
+                            If enabled, you'll have access to advanced settings that may prevent WinRocket from working if
                             misconfigured
                         </p>
                     </div>
@@ -630,7 +630,7 @@
                 <Icon v-if="resetQuestionCounter < 3" icon="mdi:bomb" class="size-8"></Icon>
                 <x-throbber v-else class="size-8"></x-throbber>
 
-                <span v-if="resetQuestionCounter === 0">Reset Winboat & Remove VM</span>
+                <span v-if="resetQuestionCounter === 0">Reset WinRocket & Remove VM</span>
                 <span v-else-if="resetQuestionCounter === 1">Are you sure? This action cannot be undone.</span>
                 <span v-else-if="resetQuestionCounter === 2">One final check, are you ABSOLUTELY sure?</span>
                 <span v-else-if="resetQuestionCounter === 3">Resetting Winboat...</span>

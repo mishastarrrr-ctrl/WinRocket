@@ -229,7 +229,7 @@
                             winboat.containerStatus.value === ContainerStatus.UNKNOWN
                         "
                     >
-                        The WinBoat Container is not running, please start it to view your apps list.
+                        The WinRocket Container is not running, please start it to view your apps list.
                     </span>
                     <span v-else>
                         The WinBoat Guest API is not running, please restart the container. If this problem persists,

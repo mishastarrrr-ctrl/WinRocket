@@ -1,4 +1,4 @@
-The WinBoat code of conduct is derived from [Ladybird](https://github.com/LadybirdBrowser/ladybird/blob/master/CODE_OF_CONDUCT.md).
+The WinRocket code of conduct is derived from [Ladybird](https://github.com/LadybirdBrowser/ladybird/blob/master/CODE_OF_CONDUCT.md).
 
 - Participants will be tolerant of opposing views.
 - Participants must ensure that their language and actions are free of personal attacks and disparaging personal remarks.

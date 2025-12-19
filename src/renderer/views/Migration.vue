@@ -23,7 +23,7 @@
             <div class="loader inline-block translate-y-1"></div>
         </h3>
         <p class="text-gray-400 max-w-[40vw] text-center">
-            Please wait while we migrate your existing WinBoat configuration to ensure compatibility with the latest
+            Please wait while we migrate your existing  configuration to ensure compatibility with the latest
             version.
         </p>
     </div>

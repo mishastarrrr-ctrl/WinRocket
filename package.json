@@ -1,5 +1,5 @@
 {
-    "name": "winboat",
+    "name": "winrocket",
     "version": "0.9.0",
     "description": "Windows for Penguins",
     "type": "module",
@@ -12,11 +12,11 @@
         "build:gs": "bash build-guest-server.sh",
         "build:linux-gs": "bash build-guest-server.sh && node scripts/build.ts && electron-builder --linux"
     },
-    "repository": "https://github.com/TibixDev/winboat",
+    "repository": "https://github.com/mishastarrrr-ctrl/WinRocket",
     "author": {
-        "name": "TibixDev",
-        "url": "https://github.com/TibixDev",
-        "email": "staff@winboat.app"
+        "name": "mishastarrrr",
+        "url": "https://github.com/mishastarrrr-ctrl",
+        "email": "misha.starrrr@gmail.com"
     },
     "devDependencies": {
         "@types/node-fetch": "^2.6.12",

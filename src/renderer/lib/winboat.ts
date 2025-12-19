@@ -270,7 +270,7 @@ export class Winboat {
 
             if (_containerStatus !== this.containerStatus.value) {
                 this.containerStatus.value = _containerStatus;
-                logger.info(`Winboat Container state changed to ${_containerStatus}`);
+                logger.info(`WinRocket Container state changed to ${_containerStatus}`);
 
                 if (_containerStatus === ContainerStatus.RUNNING) {
                     await this.containerMgr!.port(); // Cache active port mappings
@@ -288,7 +288,7 @@ export class Winboat {
      * Creates the intervals which rely on the Winboat Guest API.
      */
     async createAPIIntervals() {
-        logger.info("Creating Winboat API intervals...");
+        logger.info("Creating WinRocket API intervals...");
         const HEALTH_WAIT_MS = 1000;
         const METRICS_WAIT_MS = 1000;
         const RDP_STATUS_WAIT_MS = 1000;
@@ -304,7 +304,7 @@ export class Winboat {
             const _isOnline = await this.getHealth();
             if (_isOnline !== this.isOnline.value) {
                 this.isOnline.value = _isOnline;
-                logger.info(`Winboat Guest API went ${this.isOnline ? "online" : "offline"}`);
+                logger.info(`WinRocket Guest API went ${this.isOnline ? "online" : "offline"}`);
 
                 if (this.isOnline.value) {
                     await this.checkVersionAndUpdateGuestServer();
@@ -368,7 +368,7 @@ export class Winboat {
      * This is called when the container is in any state other than Running.
      */
     async destroyAPIIntervals() {
-        logger.info("Destroying Winboat API intervals...");
+        logger.info("Destroying WinRocket API intervals...");
         if (this.#healthInterval) {
             clearInterval(this.#healthInterval);
             this.#healthInterval = null;
@@ -483,7 +483,7 @@ export class Winboat {
     }
 
     async startContainer() {
-        logger.info("Starting WinBoat container...");
+        logger.info("Starting WinRocket container...");
         this.containerActionLoading.value = true;
         try {
             await this.containerMgr!.container("start");
@@ -492,31 +492,31 @@ export class Winboat {
             logger.error(e);
             throw e;
         }
-        logger.info("Successfully started WinBoat container");
+        logger.info("Successfully started WinRocket container");
         this.containerActionLoading.value = false;
     }
 
     async stopContainer() {
-        logger.info("Stopping WinBoat container...");
+        logger.info("Stopping WinRocket container...");
         this.containerActionLoading.value = true;
         await this.containerMgr!.container("stop");
-        logger.info("Successfully stopped WinBoat container");
+        logger.info("Successfully stopped WinRocket container");
         this.containerActionLoading.value = false;
     }
 
     async pauseContainer() {
-        logger.info("Pausing WinBoat container...");
+        logger.info("Pausing WinRocket container...");
         this.containerActionLoading.value = true;
         await this.containerMgr!.container("pause");
-        logger.info("Successfully paused WinBoat container");
+        logger.info("Successfully paused WinRocket container");
         this.containerActionLoading.value = false;
     }
 
     async unpauseContainer() {
-        logger.info("Unpausing WinBoat container...");
+        logger.info("Unpausing WinRocket container...");
         this.containerActionLoading.value = true;
         await this.containerMgr!.container("unpause");
-        logger.info("Successfully unpaused WinBoat container");
+        logger.info("Successfully unpaused WinRocket container");
         this.containerActionLoading.value = false;
     }
 
@@ -565,7 +565,7 @@ export class Winboat {
     }
 
     async resetWinboat() {
-        console.info("Resetting Winboat...");
+        console.info("Resetting WinRocket...");
 
         // 1. Stop container
         await this.stopContainer();
@@ -584,7 +584,7 @@ export class Winboat {
                 logger.error("Volume not supported on podman runtime");
             }
             // In this case we have a volume (legacy)
-            await execAsync("docker volume rm winboat_data");
+            await execAsync("docker volume rm winrocket_data");
             console.info("Removed volume");
         } else {
             const storageFolder = storage?.split(":").at(0) ?? null;
@@ -603,7 +603,7 @@ export class Winboat {
     }
 
     async launchApp(app: WinApp) {
-        if (!this.isOnline) throw new Error("Cannot launch app, Winboat is offline");
+        if (!this.isOnline) throw new Error("Cannot launch app, WinRocket is offline");
 
         if (customAppCallbacks[app.Path]) {
             logger.info(`Found custom app command for '${app.Name}'`);
@@ -698,8 +698,8 @@ export class Winboat {
         const appVersion = import.meta.env.VITE_APP_VERSION;
 
         if (version.version !== appVersion) {
-            logger.info(`New local version of WinBoat Guest Server found: ${appVersion}`);
-            logger.info(`Current version of WinBoat Guest Server: ${version.version}`);
+            logger.info(`New local version of WinRocket Guest Server found: ${appVersion}`);
+            logger.info(`Current version of WinRocket Guest Server: ${version.version}`);
         }
 
         // 2. Return early if the version is the same
@@ -748,7 +748,7 @@ export class Winboat {
             await new Promise(resolve => setTimeout(resolve, 1000));
             _isOnline = await this.getHealth();
         }
-        logger.info("Update completed, Winboat Guest Server is online");
+        logger.info("Update completed, WinRocket Guest Server is online");
 
         // 6. [OPTIONAL] Apply authentication hash in case it's not set yet, because
         // it will be required during future updates
