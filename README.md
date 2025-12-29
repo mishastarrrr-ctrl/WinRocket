@@ -6,7 +6,7 @@
       </td>
       <td>
         <h1 style="color: #3c3c43ff; margin: 0; font-size: 32px;">WinRocket</h1>
-        <p style="color: oklch(90% 0 0); font-size: 14px; margin: 5px 0;">Windows for Penguins.<br>
+        <p style="color: oklch(90% 0 0); font-size: 14px; margin: 5px 0;">Windows for the Starr People.<br>
         Run Windows apps on 🐧 Linux with ✨ seamless integration</p>
       </td>
     </tr>
